@@ -185,4 +185,52 @@ int main()
     //     }
     //     cout << endl;
     // }
+
+    /*
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+    */
+    // int n = 5;
+    // int r_cnt = n;
+    // for (int i = 1; i <= r_cnt; i++)
+    // {
+    //     int c_cnt = i;
+    //     for (int j = 1; j <= c_cnt; j++)
+    //     {
+    //         cout << j << " ";
+    //     }
+    //     cout << endl;
+    // }
+    // for (int i = r_cnt - 1; i >= 1; i--)
+    // {
+    //     int c_cnt = i;
+    //     for (int j = 1; j <= c_cnt; j++)
+    //     {
+    //         cout << j << " ";
+    //     }
+    //     cout << endl;
+    // }
+
+    //     int n = 7;
+    // int r_cnt = n;
+    // for (int i = 1; i <= 2 * r_cnt - 1; i++)
+    // {
+    //     int c_cnt = i;
+    //     if (i >= r_cnt)
+    //     {
+    //         c_cnt = 2 * n - i;
+    //     }
+    //     for (int j = 1; j <= c_cnt; j++)
+    //     {
+    //         cout << j << " ";
+    //     }
+    //     cout << endl;
+    // }
 }
