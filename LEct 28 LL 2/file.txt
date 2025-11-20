@@ -1,0 +1,9 @@
+https://leetcode.com/problems/middle-of-the-linked-list/submissions/1835228360/
+https://leetcode.com/problems/linked-list-cycle/submissions/1835240512/
+
+https://leetcode.com/problems/odd-even-linked-list/submissions/1835258212/
+
+
+https://leetcode.com/problems/reverse-linked-list/submissions/1835299785/
+
+https://leetcode.com/problems/palindrome-linked-list/submissions/1835320376/
