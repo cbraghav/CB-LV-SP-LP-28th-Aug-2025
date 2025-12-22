@@ -67,7 +67,7 @@ int main()
         int v = edge[1];
         int wt = edge[2];
         adj_list[u].push_back({v, wt});
-        adj_list[v].push_back({u, wt});
+        // adj_list[v].push_back({u, wt});
     }
 
     vector<int> dis(N, 1e9);
@@ -100,6 +100,7 @@ int main()
             int edge_wt = it.second; // wt
             if (curr_dis + edge_wt < dis[neig])
             {
+
                 dis[neig] = curr_dis + edge_wt;
                 // st.insert({dis[neig], neig});
                 pq.push({dis[neig], neig});
