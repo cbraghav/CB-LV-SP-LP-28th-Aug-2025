@@ -1,0 +1,124 @@
+https://leetcode.com/problems/target-sum/submissions/1871120234/
+
+
+https://leetcode.com/problems/coin-change/submissions/1871155256/
+
+// 01 knapSack
+
+
+class Solution {
+  public:
+  
+    int recur(int idx, int W , vector<int>& val , vector<int> & wt,
+        vector<vector<int>> &dp){
+        if(W == 0){
+            return 0;
+        }
+        if(idx >= val.size() ){ return 0;}
+        
+        if(dp[idx][W] != -1) return dp[idx][W];
+        // take 
+        int take = 0;
+        if(wt[idx] <= W){
+            take = val[idx] + recur(idx+ 1, W - wt[idx], val, wt,dp);
+        }
+        // not 
+        int not_take = 0 + recur(idx + 1, W, val, wt,dp);
+        
+        return dp[idx][W] =  max(take,not_take);
+    }
+    int knapsack(int W, vector<int> &val, vector<int> &wt) {
+        // code here
+        
+        vector<vector<int>> dp(val.size() + 1, vector<int>(W+ 10, -1));
+        
+        return recur(0, W, val, wt, dp);
+        
+    }
+};
+
+
+
+
+// Unbounded knapSack
+
+class Solution {
+    
+    // int recur(int idx, int cap, int[]val, int[] wt, int [][] dp){
+        
+    //     if(cap <=0 || idx >= val.length){
+    //         return 0;
+    //     }
+    //     if(dp[idx][cap] != -1) return dp[idx][cap];
+        
+    //     int take = 0 ;
+    //     if(wt[idx] <= cap){
+    //         take = val[idx] + recur(idx, cap - wt[idx], val, wt, dp);
+    //     }
+        
+    //     int not_take = 0 + recur(idx + 1, cap, val, wt,dp);
+        
+    //     return dp[idx][cap]= Math.max(take, not_take);
+    // }
+    public int knapSack(int val[], int wt[], int W) {
+        // code here
+        
+        int n = val.length;
+        int dp[][] = new int[n +1 ][W + 1];
+        // for(int r[] : dp) 
+        //     Arrays.fill(r, -1);
+        
+        for(int idx = n-1 ; idx >=0 ; idx--){
+            for(int cap = 0 ; cap <=W; cap++){
+                int take = 0;
+                if(wt[idx] <= cap){
+                    take = val[idx] + dp[idx][cap - wt[idx]];
+                }
+                int not_take = dp[idx+1][cap];
+                dp[idx][cap] = Math.max(take,not_take);
+                
+            }
+        }
+        
+        
+        
+        return dp[0][W];
+        // return recur(0, W, val, wt ,dp);
+    }
+}
+
+
+
+
+
+https://leetcode.com/problems/longest-common-subsequence/submissions/1871177514/
+
+
+https://leetcode.com/problems/longest-palindromic-subsequence/submissions/1871191524/
+
+
+https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
+
+
+https://leetcode.com/problems/longest-increasing-subsequence/submissions/1871205092/
+
+
+
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/submissions/1871217445/
+
+
+ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/submissions/1871228322/
+
+
+
+ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/submissions/1871232155/
+
+
+
+ https://cp-algorithms.com/
+
+
+
+ https://cses.fi/problemset/
+
+ 
